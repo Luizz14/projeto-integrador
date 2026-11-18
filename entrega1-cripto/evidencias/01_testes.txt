@@ -1,0 +1,14 @@
+test_adulterar_aad (__main__.TestHibrida) ... ok
+test_adulterar_chave_cifrada (__main__.TestHibrida) ... ok
+test_adulterar_ciphertext (__main__.TestHibrida) ... ok
+test_adulterar_nonce (__main__.TestHibrida) ... ok
+test_chave_privada_errada (__main__.TestHibrida) ... ok
+test_ida_e_volta (__main__.TestHibrida) ... ok
+test_nonce_e_chave_novos_a_cada_cifra (__main__.TestHibrida) ... ok
+test_senha_errada_na_privada (__main__.TestHibrida) ... ok
+test_texto_cifrado_nao_contem_original (__main__.TestHibrida) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 9.113s
+
+OK

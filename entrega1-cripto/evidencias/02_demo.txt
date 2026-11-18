@@ -1,0 +1,25 @@
+== DEMO: cifragem híbrida AES-256-GCM + RSA-OAEP ==
+
+Mensagem original : Relatório confidencial: senha do servidor de backup = S3gr3d0!
+Chave AES cifrada : MMe9bIenNZSlUFSm2p5dTkC0i5hhbAKoBJ+3/HWKr/7029f2... (384 bytes)
+Texto cifrado     : jGM/ad3RbvaRjn/hkWY74xiH/dDWhP7o+7oSQ7AhmpZ2wt02...
+
+[1] Decifrar pacote íntegro com a chave correta
+    -> SUCESSO: Relatório confidencial: senha do servidor de backup = S3gr3d0!
+
+[2] Adulterar 1 bit do texto cifrado e tentar decifrar
+    -> FALHA ESPERADA: InvalidTag (GCM detectou a alteração)
+
+[3] Adulterar 1 bit do nonce e tentar decifrar
+    -> FALHA ESPERADA: InvalidTag (GCM detectou a alteração)
+
+[4] Adulterar metadados autenticados (fingerprint) e tentar decifrar
+    -> FALHA ESPERADA: InvalidTag (GCM detectou a alteração)
+
+[5] Adulterar 1 bit da chave AES cifrada e tentar decifrar
+    -> FALHA ESPERADA: ValueError na decifragem RSA-OAEP
+
+[6] Decifrar com a chave privada de OUTRA pessoa
+    -> FALHA ESPERADA: só o dono da chave privada lê a mensagem (sigilo)
+
+== Fim da demo ==

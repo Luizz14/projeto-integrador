@@ -1,0 +1,7 @@
+chaves/
+*.pem
+*.enc.json
+*.dec.txt
+*.adulterada.json
+__pycache__/
+.venv/
